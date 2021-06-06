@@ -20,7 +20,7 @@ public class Line_Comparison_Problem
 	
 		System.out.println("Welcome to Line Comparison Computation Program");
 	
-		double x1, x2, y1, y2, LengthofLine,LengthofLine2;    //Declaration
+		double x1, x2, y1, y2, Line1,Line2;    //Declaration
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the value of x1");
@@ -32,8 +32,8 @@ public class Line_Comparison_Problem
 		y1 = scan.nextDouble();
 		System.out.println("Enter the value of y2");
 		y2 = scan.nextDouble();
-		LengthofLine = Math.sqrt(  (Math.pow((x2-x1),2))  + (Math.pow((y2-y1),2)) );
-		System.out.println(LengthofLine);
+		Line1 = Math.sqrt(  (Math.pow((x2-x1),2))  + (Math.pow((y2-y1),2)) );
+		System.out.println(Line1);
 		
 		
 		/**
@@ -52,23 +52,27 @@ public class Line_Comparison_Problem
 		y1 = scan.nextDouble();
 		System.out.println("Enter the value of y2");
 		y2 = scan.nextDouble();
-		LengthofLine2 = Math.sqrt(  (Math.pow((x2-x1),2))  + (Math.pow((y2-y1),2)) );
-		System.out.println(LengthofLine2);
+		Line2 = Math.sqrt(  (Math.pow((x2-x1),2))  + (Math.pow((y2-y1),2)) );
+		System.out.println(Line2);
 		
 		/**
-		 * comparing length of line and length of line2 
-		 * and stating weather both lines equal or not
-		 */
+		 * comparing line1 and line2
+		 * and displaying weather both lines equal, greater or lesser
+		*/
 		
-		if(LengthofLine == LengthofLine2)
-		{
-			System.out.println("Length of line is equal");
-		}
-			
-			else
-			{
-				System.out.println("Length of line is not equal");
+		if(Double.compare(Line1,Line2) == 0)
+		{  
+			  
+            System.out.println("Lines are equal");  
+        }  
+        else  if(Double.compare(Line1,Line2) > 0)
+        {  
+            System.out.println("Line1 is greater than Line2");  
+        }  
+        else
+        {
+        	System.out.println("Line2 is greater than Line1");
+        }
 		
-      }
  }
 }
